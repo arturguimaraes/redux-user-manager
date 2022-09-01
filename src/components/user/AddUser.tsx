@@ -11,21 +11,26 @@ const EMPTY_AGE = -999;
 
 const AddUser = () => {
   const dispatch = useAppDispatch();
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState(EMPTY_AGE);
+  const [enteredUsername, setEnteredUsername] = useState("");
+  const [enteredAge, setEnteredAge] = useState(EMPTY_AGE);
   const [modalInfo, setModalInfo] = useState(INITIAL_MODAL_STATE);
 
   const onChangeUsernameHandler = (event: Event | any) => {
-    setUsername(event.target.value);
+    setEnteredUsername(event.target.value);
   };
 
   const onChangeAgeHandler = (event: Event | any) => {
-    setAge(event.target.value);
+    setEnteredAge(event.target.value);
   };
 
   const onCloseFormErrorModal = () => {
     setModalInfo(INITIAL_MODAL_STATE);
   };
+
+  const emptyFields = () => {
+    setEnteredUsername("");
+    setEnteredAge(EMPTY_AGE);
+  }
 
   const onSubmitHandler = (event: Event | any) => {
     //Prevent form submit
@@ -33,7 +38,7 @@ const AddUser = () => {
     //Resets error
     setModalInfo(INITIAL_MODAL_STATE);
     //Verify if empty
-    if (username === "" || age.toString() === "" || age === EMPTY_AGE) {
+    if (enteredUsername === "" || enteredAge.toString() === "" || enteredAge === EMPTY_AGE) {
       setModalInfo({
         show: true,
         error: true,
@@ -42,23 +47,23 @@ const AddUser = () => {
       return;
     }
     //Verify if age is wrong
-    if (isNaN(age) || age <= 0) {
+    if (isNaN(enteredAge) || enteredAge <= 0) {
       setModalInfo({
         show: true,
         error: true,
         message: "Please enter a valid age (> 0).",
       });
+      setEnteredAge(EMPTY_AGE);
       return;
     }
     //Success
     const user: User = {
       id: uuidv4(),
-      username: username,
-      age: age,
+      username: enteredUsername,
+      age: enteredAge,
     };
     dispatch(addUser(user));
-    setUsername("");
-    setAge(EMPTY_AGE);
+    emptyFields();
     setModalInfo({
       show: true,
       error: false,
@@ -88,7 +93,7 @@ const AddUser = () => {
                     type="text"
                     placeholder="Enter username"
                     onChange={onChangeUsernameHandler}
-                    value={username}
+                    value={enteredUsername}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="age">
@@ -98,7 +103,7 @@ const AddUser = () => {
                     step="1"
                     placeholder="Enter an age"
                     onChange={onChangeAgeHandler}
-                    value={age === -999 ? "" : age}
+                    value={enteredAge === -999 ? "" : enteredAge}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
