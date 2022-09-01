@@ -1,6 +1,6 @@
-![redux-user-manager](https://github.com/arturguimaraes/toy-blocks/blob/main/src/assets/img/print1.PNG?raw=true)
-
 # Redux User Manager
+
+![redux-user-manager](https://github.com/arturguimaraes/redux-user-manager/blob/main/src/assets/img/home.png?raw=true)
 
 ## Installation
 
