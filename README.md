@@ -5,24 +5,34 @@
 ## Installation
 
 1. `git clone repo`
-2. `cd toy-blocks
-3. `nvm use`
-4. `npm i`
-5. `npm start`
-6. `npm test`
+2. `cd redux-user-manager`
+3. `npm i`
+4. `npm start`
 
 ## Introduction
 
-This is a ReactJS (using Redux) + TypeScript challenge. The current application is displaying a list of nodes, and each node has many Blocks. Each node represents a server. Each server implements the same API but returns different data. The important endpoints you will need to know for each server are:
-/api/v1/status
-/api/v1/blocks
+This is a ReactJS (using Redux) + TypeScript project. The main objective is to add users using form control and redux to manage the states of the user list.
 
-Each node has many blocks and the blocks for each node are returned from the blocks endpoint.
+## Implementation
 
-Currently the application is getting the status for each node and updating the state. We would like you to retrieve the blocks from the endpoint, place them in the state and render them into a list that matches the design.
+The project users ReactJS and Typescript. It also uses the Bootstrap React library and it's components, and explores concepts of:
+1. Redux
+    1.1 Hooks
+    1.2 Store
+    1.3 Actions and Slice
+    1.4 State
+    1.5 Dispatch
+2. useState
+3. Interface
+4. Event handlers
 
-## Acceptance criteria:
-1. Blocks are displayed when opening up the card
-2. Loading, error, empty states are displayed when appropriate
-3. Tests pass and coverage has been added to cover the changes
-4. Implementation matches the design
+## Features
+
+1. Form control for empty fields.
+![redux-user-manager](https://github.com/arturguimaraes/redux-user-manager/blob/main/src/assets/img/error1.png?raw=true)
+
+2. Form control for < 0 age input.
+![redux-user-manager](https://github.com/arturguimaraes/redux-user-manager/blob/main/src/assets/img/error2.png?raw=true)
+
+3. Success modal
+![redux-user-manager](https://github.com/arturguimaraes/redux-user-manager/blob/main/src/assets/img/success.png?raw=true)
