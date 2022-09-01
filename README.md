@@ -16,15 +16,10 @@ This is a ReactJS (using Redux) + TypeScript project. The main objective is to a
 ## Implementation
 
 The project users ReactJS and Typescript. It also uses the Bootstrap React library and it's components, and explores concepts of:
-1. Redux
-    1.1 Hooks
-    1.2 Store
-    1.3 Actions and Slice
-    1.4 State
-    1.5 Dispatch
+1. Redux (Hooks, Store, Actions, Slice, State, Dispatch)
 2. useState
 3. Interface
-4. Event handlers
+2. Event handlers
 
 ## Features
 
