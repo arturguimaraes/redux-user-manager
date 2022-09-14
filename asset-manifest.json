@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/redux-user-manager/static/css/main.a4c405f4.css",
+    "main.js": "/redux-user-manager/static/js/main.bab87a8d.js",
+    "index.html": "/redux-user-manager/index.html",
+    "main.a4c405f4.css.map": "/redux-user-manager/static/css/main.a4c405f4.css.map",
+    "main.bab87a8d.js.map": "/redux-user-manager/static/js/main.bab87a8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4c405f4.css",
+    "static/js/main.bab87a8d.js"
+  ]
+}
