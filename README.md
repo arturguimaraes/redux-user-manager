@@ -2,6 +2,10 @@
 
 ![redux-user-manager](https://github.com/arturguimaraes/redux-user-manager/blob/main/src/assets/img/home.png?raw=true)
 
+## Live Application
+
+Click [here](https://arturguimaraes.github.io/redux-user-manager/) to go to the application.
+
 ## Installation
 
 1. `git clone repo`
